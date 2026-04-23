@@ -55,7 +55,7 @@
 <p>Because the app does not have its own backend, it fetches transit data directly from public sources. When you use the app, requests are sent to the following providers:</p>
 
 <ul>
-  <li><strong><a href="https://livetransport.eu/" rel="noopener">livetransport.eu</a></strong> — the source of all real-time bus and tram data for Plovdiv. The app sends stop IDs, trip IDs, and vehicle IDs to their API and WebSocket endpoints. These requests do not contain your identity, account info, or location. Like any internet service, livetransport.eu can see the IP address of the requests, subject to their own privacy practices.</li>
+  <li><strong>A public-transport data provider</strong> — the source of real-time bus and tram data for Plovdiv. The app sends stop IDs, trip IDs, and vehicle IDs to fetch arrivals and live positions. These requests do not contain your identity, account info, or location. Like any internet service, the provider can see the IP address of the requests, subject to its own privacy practices.</li>
   <li><strong><a href="https://nominatim.openstreetmap.org/" rel="noopener">Nominatim (OpenStreetMap)</a></strong> — used for address search in the route planner. When you type a street name or address, that text is sent to Nominatim to resolve it into coordinates. It does not contain personal information unless you personally type personal information into the search field.</li>
   <li><strong><a href="https://carto.com/" rel="noopener">CARTO</a> / OpenStreetMap tile servers</strong> — the map you see is rendered from publicly-served map tiles. Tile requests contain map coordinates and zoom level.</li>
 </ul>
