@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PlovdivBus — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    max-width: 720px; margin: 40px auto; padding: 0 20px;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1a1a1a; background: #f7f7f5;
+  }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-top: 32px; }
+  .sub { color: #666; font-size: 13px; margin-bottom: 28px; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 4px; }
+  code { background: #eee; padding: 1px 5px; border-radius: 3px; font-size: 14px; }
+  a { color: #0057b7; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 32px 0; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #111; color: #e8e8e8; }
+    code { background: #222; }
+    .sub { color: #888; }
+    hr { border-top-color: #333; }
+    a { color: #4da3ff; }
+  }
+</style>
+</head>
+<body>
+
+<h1>PlovdivBus — Privacy Policy</h1>
+<p class="sub">Last updated: 23 April 2026</p>
+
+<p>PlovdivBus (“the app”) is a free, independent public-transport tracking app for the city of Plovdiv, Bulgaria. It is developed by Teodor Sabev (“we”, “us”). This page explains what data the app uses, what leaves your device, and what we store on our side.</p>
+
+<h2>Short version</h2>
+<ul>
+  <li><strong>We do not have a server.</strong> The app does not run our own backend and does not operate user accounts.</li>
+  <li><strong>We do not collect any personal data.</strong> Nothing you do in the app is logged, profiled, or sold.</li>
+  <li><strong>Your GPS location stays on your device.</strong> It is used locally to show nearby stops and compute walking times. It is never transmitted to us or to any third party.</li>
+  <li><strong>We do not use advertising, analytics, or tracking SDKs.</strong></li>
+</ul>
+
+<hr>
+
+<h2>Data the app accesses on your device</h2>
+<ul>
+  <li><strong>Precise location (<code>ACCESS_FINE_LOCATION</code> / <code>NSLocationWhenInUseUsageDescription</code>).</strong> Used only while the app is open, only to (a) show distance and walking time to each stop, (b) center the map on you, and (c) follow your trip along a route. Coordinates are processed in-memory on your device and never leave it.</li>
+  <li><strong>Local storage.</strong> The app saves your preferences (language, theme, walking pace, list of favorite stops) to your device's local storage using <code>AsyncStorage</code>. This data stays on your device and is not synced anywhere. Uninstalling the app deletes it.</li>
+</ul>
+
+<h2>Third-party services the app talks to</h2>
+<p>Because the app does not have its own backend, it fetches transit data directly from public sources. When you use the app, requests are sent to the following providers:</p>
+
+<ul>
+  <li><strong><a href="https://livetransport.eu/" rel="noopener">livetransport.eu</a></strong> — the source of all real-time bus and tram data for Plovdiv. The app sends stop IDs, trip IDs, and vehicle IDs to their API and WebSocket endpoints. These requests do not contain your identity, account info, or location. Like any internet service, livetransport.eu can see the IP address of the requests, subject to their own privacy practices.</li>
+  <li><strong><a href="https://nominatim.openstreetmap.org/" rel="noopener">Nominatim (OpenStreetMap)</a></strong> — used for address search in the route planner. When you type a street name or address, that text is sent to Nominatim to resolve it into coordinates. It does not contain personal information unless you personally type personal information into the search field.</li>
+  <li><strong><a href="https://carto.com/" rel="noopener">CARTO</a> / OpenStreetMap tile servers</strong> — the map you see is rendered from publicly-served map tiles. Tile requests contain map coordinates and zoom level.</li>
+</ul>
+
+<p>We do not control these third parties and do not receive any data from them about you. Their logging, retention, and privacy policies are their own.</p>
+
+<h2>What we store on our servers</h2>
+<p>Nothing. We operate no servers, no databases, no analytics, and no user accounts. We cannot see, retrieve, or delete any data about you, because we never receive any in the first place.</p>
+
+<h2>Children</h2>
+<p>The app is not directed at children under 13 and does not knowingly collect data from anyone.</p>
+
+<h2>Permissions rationale</h2>
+<ul>
+  <li><strong>Location (foreground only)</strong> — to show nearby stops, "leave in…" walking timers, and live navigation while riding. The app never requests background location.</li>
+  <li><strong>Internet</strong> — to fetch real-time transit data and map tiles from the third-party services listed above.</li>
+</ul>
+
+<h2>Your rights</h2>
+<p>Since we do not collect personal data, there is nothing on our side to request, access, correct, or delete. If you want to delete the local data the app has saved on your device, uninstalling the app removes it entirely.</p>
+
+<h2>Changes to this policy</h2>
+<p>If this policy changes in a way that affects what the app does with data, we will update the "Last updated" date above and, where appropriate, note the change in release notes.</p>
+
+<h2>Contact</h2>
+<p>Questions or concerns? Email <a href="mailto:tedisabev@gmail.com">tedisabev@gmail.com</a>.</p>
+
+</body>
+</html>
